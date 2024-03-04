@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Diabetes</title>
+    <link rel="icon" href="./DIABETESLEARNING-FRONT/fotos/analisis.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="./estilosD.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div class="title"> 
+        Dashboard de Diabetes <br>
+        <a href="./DIABETESLEARNING-FRONT/indice.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" fill="#353636" viewBox="0 0 576 512">
+            <path
+                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+        </svg></a>
+    </div>
+
+    <div class="tarjeta tres">
+        <h2>Porcentaje de la población mundial con diabetes</h2>
+        <p id="">9.3%</p>
+    </div>
+
+    <div class="tarjeta">
+        <h2>Edad media de las personas con diabetes</h2>
+        <p id="averageAge">52 años</p>
+        <div class="imagen2"> <img src="./img/media-edad.png" alt="edad">
+        </div>
+    </div>
+
+    <div class="tarjeta">
+        <h2>Nivel medio de glucosa en sangre</h2>
+        <p id="averageGlucose">148 mg/dL</p>
+    </div>
+
+    <div class="tarjeta">
+        <h2>Porcentaje de personas con diabetes tipo 1</h2>
+        <p id="type1">10%</p>
+    </div>
+
+    <div class="tarjeta large-tarjeta">
+        <canvas id="chart1"></canvas>
+        <div class="container">
+
+            <p class="texto">Gráfico con la media de glucosa de una persona con diabetes tipo 1</p>
+            <div class="small">En este gráfico se puede observar la media de glucosa de una persona durante todo un año,
+                obteniendo una media aproximada por mes.</div>
+            <div class="grafico-gl">
+                <p>En una persona diabética tipo 1, los datos esperados de glucosa en sangre son:</p>
+                <ul>
+                    <li>Glucosa en ayunas: entre 80 y 130 mg/dl.</li>
+                    <li>Glucosa después de las comidas: menos de 180 mg/dl.</li>
+                    <li>Antes de acostarse: entre 100 y 140 mg/dl.</li>
+                </ul>
+                <p>Es importante monitorear regularmente los niveles de glucosa y ajustar la medicación y la dieta según
+                    las
+                    indicaciones del médico.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esp rotate">
+        <h2>Información sobre la diabetes</h2>
+        <p>La diabetes es una enfermedad crónica que ocurre cuando el páncreas no produce suficiente insulina o
+            cuando
+            el cuerpo no puede utilizar eficazmente la insulina que produce.</p>
+    </div>
+
+    <div class="tarjeta-graf">
+        <p class="titulo-graf">Grafico Tipo Diabetes</p>
+        <canvas id="chart3"></canvas>
+    </div>
+    <div class="tarjeta">
+        <h2>Porcentaje de personas con diabetes tipo 2</h2>
+        <p id="type2">90%</p>
+        <div class="imagen"> <img src="./img/tipo2.png" alt="tipo2">
+        </div>
+    </div>
+    <div class="tarjeta">
+        <h2>Porcentaje de personas con diabetes que requieren insulina</h2>
+        <p id="insulin">40%</p>
+        <div class="imagen"> <img src="./img/insulina.png" alt="insulina">
+        </div>
+    </div>
+
+    <div class="tarjeta-graf">
+        <p class="titulo-graf">Grafico Mujeres vs Hombres</p>
+        <canvas id="chart2"></canvas>
+    </div>
+    <div class="tarjeta ancho-tarjeta" id="celebrities">
+        <h2>Famosos con diabetes</h2>
+        <ul>
+            <li class="famoso">
+                <div class="contendido-famoso">
+                    <img src="./img/nick.png" alt="Nick Jonas">
+                    <div><strong>Nick Jonas</strong></div>
+                    <div>Cantante y Actor - Tipo 1</div>
+                </div>
+            </li>
+            <li class="famoso">
+                <div class="contendido-famoso">
+
+                    <img src="./img/salma.png" alt="Salma Hayek">
+                    <div><strong>Salma Hayek</strong></div>
+                    <div>Actriz - Diabetes gestacional</div>
+                </div>
+            </li>
+
+            <li class="famoso">
+                <div class="contendido-famoso">
+                    <img src="./img/tom.png" alt="Tom Hanks">
+                    <div><strong>Tom Hanks </strong></div>
+                    <div>Actor - Tipo 2</div>
+                </div>
+            </li>
+            <li class="famoso">
+                <div class="contendido-famoso">
+                    <img src="./img/halleberry.png" alt="Halle Berry">
+                    <div><strong>Halle Berry </strong></div>
+                    <div>Actriz - Tipo 1</div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="tarjeta-graf g-2">
+        <p class="texto">Países con Mayor Incidencia de Diabetes en el Mundo</p>
+        <div class="container2">
+            <canvas id="grafico-doughnut" class="grafico-doughnut"></canvas>
+        </div>
+    </div>
+
+    <div class="tarjeta-graf g-1">
+        <h2>Gráfico de dispersión</h2>
+        <canvas id="grafico-dispersion"></canvas>
+    </div>
+
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

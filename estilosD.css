@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+:root {
+    --color-principal: #0f287ad9;
+    --color-secundario: #d0e3f7;
+    --color-destacado: #3474b8;
+    --fuente: 'Fredoka', sans-serif;
+    --velocidad-transicion: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px 20px;
+    color: var(--color-principal);
+    font-family: var(--fuente);
+    padding: 20px;
+    background-color: var(--color-secundario);
+    scrollbar-color: #353636 transparent;
+    overflow-x: hidden;
+}
+
+/*estilos para las barras de scroll*/
+
+html::-webkit-scrollbar {
+    width: 7px;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #14365c;
+
+}
+
+/*********************tarjetas************************/
+
+.tarjeta {
+    border: 1px solid var(--color-principal);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all var(--velocidad-transicion) ease;
+    text-align: center;
+}
+
+.tarjeta:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.tarjeta h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid var(--color-principal);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    font-size: 2em;
+    margin: 0;
+}
+
+.tarjeta .texto {
+    font-size: 2em;
+    margin: 0;
+}
+
+.ancho-tarjeta {
+    grid-column: span 2;
+}
+
+.ancho-tarjeta li {
+    list-style: none;
+    padding: 10px;
+}
+
+.large-tarjeta {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.texto {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.small {
+    font-size: 17px;
+    color: #555555;
+    margin-top: 5px;
+}
+
+.grafico-gl {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.grafico-gl p {
+    font-size: 1.4em;
+    padding: 15px;
+}
+
+.grafico-gl ul {
+    font-size: 1.2em;
+    color: #474545;
+    padding-left: 50px;
+}
+
+/**/
+div#celebrities {
+    height: 56vh;
+    overflow-y: scroll;
+    grid-column: span 1;
+
+}
+
+div#celebrities img {
+    width: 100px;
+    border: 4px solid #474545;
+    border-radius: 50%;
+}
+
+.contendido-famoso {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.contendido-famoso div {
+    padding: 10px;
+}
+
+/**/
+.title {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.tarjeta-graf {
+    border: 1px solid var(--color-principal);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all var(--velocidad-transicion) ease;
+    text-align: center;
+}
+
+.titulo-graf {
+    font-size: 23px;
+    border-bottom: 2px solid #3474b8;
+    padding-bottom: 5px;
+}
+
+.tarjeta-graf:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+canvas#chart3,
+#chart2 {
+    padding-top: 15px;
+}
+
+
+
+.g-1 {
+    grid-column: span 2;
+
+}
+
+.g-2 {
+    grid-row: span 1;
+    grid-column: span 2;
+
+}
+
+/**/
+
+
+.esp {
+    grid-column: span 2;
+}
+
+
+.esp {
+    border: 1px solid var(--color-principal);
+    color: var(--color-secundario);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: var(--color-destacado);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all var(--velocidad-transicion) ease;
+    grid-column: span 1;
+    font-size: 20px;
+}
+
+.esp:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+}
+
+/**/
+
+
+
+.container2 {
+    max-width: 370px;
+    margin: 20px auto;
+    padding: 20px;
+
+}
+
+/***/
+.imagen img {
+
+    width: 30vw;
+}
+
+.imagen,
+.imagen2 {
+    display: flex;
+    justify-content: center;
+}
+
+.imagen2 img {
+    display: none;
+}
+
+/* Estilos para pantallas medianas */
+@media (min-width: 751px) and (max-width: 900px) {
+
+
+    body {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 3fr));
+        background-color: #f0d0db;
+        /* padding-right: 25px; */
+
+    }
+
+    .tarjeta {
+        grid-column: span 1;
+        border: 1px solid #63132e;
+        color: #7a213f;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 4px #3b063931;
+    }
+
+    .tarjeta h2 {
+        border-bottom: 1px solid #7a213f;
+        font-size: 1.3em;
+    }
+
+    .esp {
+        font-size: 1em;
+        background-color: #d87093;
+        color: #ffffff;
+        border: 2px solid white;
+        grid-column: span 2;
+
+    }
+
+    .titulo-graf {
+        font-size: 1em;
+        border-bottom: 1px solid #7a213f;
+
+    }
+
+    div#celebrities {
+        grid-row: 2;
+        grid-column: span 1;
+
+    }
+
+    .tarjeta-graf {
+        border: 1px solid #63132e;
+        color: #63132e;
+        grid-column: span 1;
+
+    }
+
+    .ancho-tarjeta,
+    .large-tarjeta {
+        grid-column: span 2;
+        color: #63132e;
+        font-size: 0.8rem;
+
+    }
+
+    .title {
+        grid-column: span 1;
+        color: #63132e;
+    }
+
+    .tarjeta-graf.g-1,
+    .g-2 {
+        grid-column: span 2;
+
+    }
+
+    html::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    html::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: #63132e;
+
+    }
+
+    .imagen2 img {
+        display: flex;
+        width: 50vw;
+    }
+}
+
+/* Estilos para pantallas grandes */
+/* @media (min-width: 901px) {
+    body {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .esp {
+        grid-row: span 1;
+        grid-column: span 1;
+        font-size: 1.5em;
+
+    }
+
+    .ancho-tarjeta {
+        grid-area: span 1;
+    }
+
+    .large-tarjeta {
+        grid-column: span 2;
+    }
+
+    .title {
+        grid-column: span 1;
+    }
+
+    
+} */
+
+/* Estilos para pantallas grandes */
+@media (max-width: 1590px) {
+
+    body {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .esp {
+        grid-row: span 1;
+        grid-column: span 1;
+        font-size: 1.5em;
+
+    }
+
+    .ancho-tarjeta {
+        grid-area: span 1;
+    }
+
+    .large-tarjeta {
+        grid-column: span 2;
+    }
+
+    .title {
+        grid-column: span 1;
+    }
+
+    div#celebrities {
+        grid-column: span 1;
+    }
+
+    .contendido-famoso {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .g-1 {
+        grid-column: span 2;
+
+    }
+
+    .g-2 {
+        grid-column: span 2;
+
+    }
+
+
+}
+
+/**/
+
+
+
+@media (max-width: 800px) {
+    body {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+        background-color: #ded6ee;
+    }
+
+    .title {
+        color: #360a3a;
+    }
+
+    .tarjeta {
+        border: 1px solid #291450;
+        color: #412c66;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 4px #3b063931;
+
+    }
+
+    .ancho-tarjeta {
+        grid-column: span 1;
+    }
+
+    .large-tarjeta {
+        grid-column: span 1;
+    }
+
+    .title {
+        grid-column: span 1;
+    }
+
+    .esp {
+        background-color: #9470d8;
+        color: #ffffff;
+        border: 2px solid white;
+        font-size: 1.15em;
+
+    }
+
+    .g-1 {
+        grid-column: span 1;
+        grid-row: 2;
+
+    }
+
+    .g-2 {
+        grid-column: span 1;
+
+    }
+
+    div#celebrities {
+        grid-column: span 2;
+        grid-row: 6;
+        /* height: 56vh; */
+    }
+
+    .contendido-famoso {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    html::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    html::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: #360a3a;
+
+    }
+
+    .imagen img {
+        display: none;
+    }
+
+    .grafico-gl {
+        display: none;
+    }
+}
